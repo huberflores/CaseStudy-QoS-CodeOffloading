@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level width="2292" height="480">
+    <tile x="0" y="0" tile="1" />
+    <tile x="191" y="0" tile="1" />
+    <tile x="382" y="0" tile="1" />
+    <tile x="382" y="-150" tile="3" />
+    <tile x="573" y="0" tile="1" />
+    <tile x="764" y="0" tile="1" />
+    <tile x="955" y="0" tile="1" />
+    <tile x="1146" y="0" tile="1" />
+    <tile x="1337" y="0" tile="1" />
+    <tile x="1528" y="0" tile="1" />    
+    <tile x="1719" y="0" tile="1" />
+    <tile x="1910" y="0" tile="1" />
+    <tile x="2101" y="0" tile="1" />
+    <tile x="2166" y="-127" tile="4" />
+</level>
