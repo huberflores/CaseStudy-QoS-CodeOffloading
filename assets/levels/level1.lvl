@@ -14,4 +14,5 @@
     <tile x="1910" y="0" tile="1" />
     <tile x="2101" y="0" tile="1" />
     <tile x="2166" y="-127" tile="4" />
+    <floor x="0" y="-1" height="300" width="2292" type="Grass" />
 </level>

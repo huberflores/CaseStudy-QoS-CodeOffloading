@@ -9,6 +9,7 @@ import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.MoveModifier;
 import org.andengine.entity.modifier.ParallelEntityModifier;
 import org.andengine.entity.modifier.RotationModifier;
+import org.andengine.entity.primitive.Line;
 import org.andengine.entity.primitive.Rectangle;
 import org.andengine.entity.scene.IOnSceneTouchListener;
 import org.andengine.entity.scene.Scene;
@@ -25,6 +26,7 @@ import org.andengine.extension.physics.box2d.util.Vector2Pool;
 import org.andengine.extension.physics.box2d.util.constants.PhysicsConstants;
 import org.andengine.input.touch.TouchEvent;
 import org.andengine.opengl.util.GLState;
+import org.andengine.util.color.Color;
 
 import android.hardware.SensorManager;
 import android.util.Log;
@@ -36,6 +38,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
+import com.badlogic.gdx.physics.box2d.EdgeShape;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.Manifold;
@@ -88,10 +91,11 @@ public class GameScene extends BaseScene implements IOnSceneTouchListener {
 
 	@Override
 	public void createScene() {
-		camera.setCenter(GameActivity.getCameraWidth()/2, GameActivity.getCameraHeight()/2);
-		levelManager = new LevelManager(activity.getAssets(), levelID);
-		createHUD();
 		createPhysics();
+		camera.setCenter(GameActivity.getCameraWidth()/2, GameActivity.getCameraHeight()/2);
+		levelManager = new LevelManager(activity.getAssets(), levelID, this, physicsWorld, vbom);
+		createHUD();
+		levelManager = new LevelManager(activity.getAssets(), levelID);		
 		addPlayer();
 		createLevel();
 		tiles = getLevelTiles();

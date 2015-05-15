@@ -12,4 +12,6 @@
     <tile x="1719" y="0" tile="5" />
     <tile x="1910" y="0" tile="5" />
     <tile x="2101" y="0" tile="5" />
+    <floor x="0" y="-1" height="300" width="573" type="Snow"/>
+    <floor x="764" y="-1" height="300" width="1528" type="Snow"/>
 </level>
