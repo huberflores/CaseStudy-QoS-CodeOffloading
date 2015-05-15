@@ -91,11 +91,10 @@ public class GameScene extends BaseScene implements IOnSceneTouchListener {
 
 	@Override
 	public void createScene() {
-		createPhysics();
 		camera.setCenter(GameActivity.getCameraWidth()/2, GameActivity.getCameraHeight()/2);
+		createPhysics();
 		levelManager = new LevelManager(activity.getAssets(), levelID, this, physicsWorld, vbom);
 		createHUD();
-		levelManager = new LevelManager(activity.getAssets(), levelID);		
 		addPlayer();
 		createLevel();
 		tiles = getLevelTiles();
